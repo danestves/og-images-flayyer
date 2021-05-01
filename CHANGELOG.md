@@ -1,3 +1,9 @@
+### 1.3.0 (2021-05-01)
+
+##### New Features
+
+* **docs:**  adding info for variables (3ffa99c6)
+
 ### 1.2.0 (2021-05-01)
 
 ##### Bug Fixes
