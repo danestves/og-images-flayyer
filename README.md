@@ -1,4 +1,4 @@
-# 🌠 Flayyer template
+# 🌠 My-Project
 
 Feel free to checkout the latest documentation at [docs.flayyer.com](https://docs.flayyer.com) 📖
 
@@ -13,23 +13,30 @@ npm run start
 npm run start --port 3000 --host 0.0.0.0
 ```
 
-Then preview your template at [http://localhost:7777/main.html](http://localhost:7777/main.html)
+Then preview your template at [https://flayyer.github.io/flayyer-studio](https://flayyer.github.io/flayyer-studio)
+
+[![flayyer-studio screenshot](https://raw.githubusercontent.com/flayyer/flayyer-studio/main/.github/screenshot.png)](https://flayyer.github.io/flayyer-studio)
 
 ## Deployment
 
-Once you are ready to deploy please remember to build the project first:
-
-**When using Tailwind CSS it is important to set `NODE_ENV` to `production`. Otherwise unused styles wont be purged.**
+Once you are ready to deploy to production please remember to build the project first:
 
 ```sh
-export NODE_ENV=production
-npm run build
+NODE_ENV=production npm run build
 ```
 
-Get your Flayyer key from [https://flayyer.com](https://flayyer.com) and set it as an environment variable:
+Get your Flayyer key from [https://flayyer.com/dashboard/_/settings](https://flayyer.com/dashboard/_/settings) and set it as an environment variable:
 
 ```sh
+# in your terminal
 export FLAYYER_KEY=...
+```
+
+Alternatively you can create a `.env` file:
+
+```sh
+# .env
+FLAYYER_KEY=...
 ```
 
 Deploy to production
@@ -38,15 +45,26 @@ Deploy to production
 npm run deploy
 ```
 
-You can find the URL for your deck in the terminal output.
+You can find the live URL for your deck in the terminal output, it is something like: `https://flayyer.io/v2/tenant/deck/template`.
 
-## Flayyer Studio
+## Usage
 
-For a better development experience visit [flayyer.github.io/flayyer-studio/](https://flayyer.github.io/flayyer-studio/)
+Append queryparams to your URLs and we will set those as props when rendering.
 
-![flayyer studio screenshot](https://github.com/flayyer/flayyer-studio/raw/main/.github/screenshot.png)
+![Resultant flayyer live image](https://github.com/flayyer/create-flayyer-app/blob/master/.github/assets/result-1.png?raw=true)
+
+![Resultant flayyer live image](https://github.com/flayyer/create-flayyer-app/blob/master/.github/assets/result-2.png?raw=true)
+
+Next steps:
+
+* Use our official libraries to format URLs https://docs.flayyer.com/docs/libraries
+* Read our guides to integrate this into your software: https://docs.flayyer.com/guides
 
 ## FAQ & Caveats
+
+### What is Flayyer studio?
+
+It's a browser app that opens your local server (localhost:7777) in multiple _iframes_ so you can have a better developer experience. It works best on Firefox.
 
 ### SCSS Support
 
@@ -56,7 +74,7 @@ Sure. Install `npm install --save sass` and just import your SASS/SCSS files jus
 
 ### Custom fonts
 
-Refer to https://docs.flayyer.com/docs/features/fonts.
+Refer to https://docs.flayyer.com/docs/features/fonts. If you are building a template for the marketplace and want to support on-the-fly fonts you can use: [flayyer/use-googlefonts](https://github.com/flayyer/use-googlefonts).
 
 ### Nested directories
 
@@ -66,4 +84,8 @@ Folders outside `/templates` is ok 👍
 
 ### Development server crashes or stop previewing
 
-The development server (`npm start`) can be buggy sometimes. Please restart the server if you encounter any problems.
+The development server (`npm run start`) can be buggy sometimes. Please restart the server if you encounter any problems.
+
+---
+
+> Default image credits: [Photo by Osvaldo Castillo from Pexels](https://images.pexels.com/photos/3402313/pexels-photo-3402313.jpeg)
