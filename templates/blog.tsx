@@ -22,15 +22,26 @@ import { formatDate } from "../utils";
  */
 export const schema = V.Object({
   title: V.String({ default: "Created with React.js and Tailwind" }),
-  date: V.Optional(V.String()),
-  dateLegend: V.Optional(V.String()),
+  date: V.Optional(
+    V.String({
+      default: "2021-12-31",
+      description: "You can also pass an ISO date",
+    })
+  ),
+  dateLegend: V.Optional(V.String({ default: "Published at" })),
   description: V.Optional(V.String()),
   image: V.Image({
     title: "Background image URL",
     examples: [alternative],
     default: background,
   }),
-  lang: V.Optional(V.String()),
+  lang: V.Optional(
+    V.String({
+      default: "en",
+      description:
+        "Used to format the date with date-fns in given lang. Available: en, es",
+    })
+  ),
 });
 type Variables = Static<typeof schema>;
 
