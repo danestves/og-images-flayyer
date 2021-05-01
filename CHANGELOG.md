@@ -1,3 +1,9 @@
+### 1.2.0 (2021-05-01)
+
+##### Bug Fixes
+
+* **ci:**  adding missing github action (5c2ed9a9)
+
 ### 1.1.0 (2021-05-01)
 
 ##### New Features
