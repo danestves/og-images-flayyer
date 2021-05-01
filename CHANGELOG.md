@@ -1,3 +1,9 @@
+### 1.4.0 (2021-05-01)
+
+##### New Features
+
+* **config:**  adding more fields for flayyer config (1df4b4cb)
+
 ### 1.3.0 (2021-05-01)
 
 ##### New Features
