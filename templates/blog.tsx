@@ -1,47 +1,29 @@
 // Dependencies
-import React from "react";
+import { FlayyerAgentName, TemplateProps } from "@flayyer/flayyer-types";
 import { Variable as V, Validator, Static } from "@flayyer/variables";
-import { TemplateProps } from "@flayyer/flayyer-types";
-import clsx from "clsx";
+import * as React from "react";
+
+// Assets
+import alternative from "../static/alternative.jpeg";
+import background from "../static/background.jpeg";
+import me from "../static/me.jpg";
 
 // Components
-import { Layer } from "../components";
-
-// Static
-import background from "../static/background.jpeg";
-import alternative from "../static/alternative.jpeg";
+import { Layer } from "../components/layers";
 
 // Styles
 import "../styles/tailwind.css";
-
-// Utils
-import { formatDate } from "../utils";
 
 /**
  * Export to enable variables UI on Flayyer.com
  */
 export const schema = V.Object({
-  title: V.String({ default: "Created with React.js and Tailwind" }),
-  date: V.Optional(
-    V.String({
-      default: "2021-12-31",
-      description: "You can also pass an ISO date",
-    })
-  ),
-  dateLegend: V.Optional(V.String({ default: "Published at" })),
-  description: V.Optional(V.String()),
+  title: V.String({ default: "Created with React.js, TailwindCSS & Flayyer" }),
   image: V.Image({
     title: "Background image URL",
     examples: [alternative],
     default: background,
   }),
-  lang: V.Optional(
-    V.String({
-      default: "en",
-      description:
-        "Used to format the date with date-fns in given lang. Available: en, es",
-    })
-  ),
 });
 type Variables = Static<typeof schema>;
 
@@ -49,59 +31,75 @@ const validator = new Validator(schema);
 
 // Make sure to 'export default' a React component
 export default function MainTemplate(props: TemplateProps<Variables>) {
-  const { variables } = props;
+  const { agent, height, variables, width } = props;
   if (!validator.validate(variables)) {
-    return <img className="object-cover w-full h-full" src={background} />; // Fallback for invalid variables
+    return <img className="w-full h-full object-cover" src={background} />; // Fallback for invalid variables
   }
 
-  const {
-    title,
-    date,
-    dateLegend = "Published at",
-    description,
-    image,
-    lang = "en",
-  } = variables;
+  const { title, image } = variables;
+
+  const isThumnail = height <= 1080 && width <= 1080;
+  if (agent.name === FlayyerAgentName.WHATSAPP && isThumnail) {
+    return (
+      <Layer className="bg-black/10">
+        <Layer className="opacity-10">
+          <img
+            src={image}
+            loading="eager"
+            alt={title}
+            className="object-cover -rotate-12 scale-150 w-full h-full"
+          />
+        </Layer>
+      </Layer>
+    );
+  }
 
   return (
-    <>
-      <Layer>
-        <div className="absolute inset-0 bg-no-repeat bg-cover svg-pattern" />
+    <Layer className="bg-black/10">
+      <Layer className="overflow-hidden opacity-25">
+        <div className="absolute transform scale-150 bg-[#00C389] rounded-full -top-4 right-2 h-32 w-32 filter blur-2xl mix-blend-multiply" />
+        <div className="absolute transform scale-125 rounded-full bg-[#003AC3] bottom-2 right-[22.5%] h-32 w-32 filter blur-2xl mix-blend-multiply" />
+        <div className="absolute transform scale-150 rounded-full bg-[#8900C3] -bottom-3 right-4 h-32 w-32 filter blur-2xl mix-blend-multiply" />
       </Layer>
-      <Layer className="opacity-0 bg-gradient-to-t from-black banner:opacity-60" />
-      <Layer className="flex flex-col items-center justify-center px-4 py-4 text-center text-white banner:flex-row banner:justify-between">
-        <div
-          className={clsx(
-            !description &&
-              "banner:flex banner:items-center banner:justify-between banner:w-full",
-            "sq:flex sq:flex-col"
-          )}
+
+      <Layer className="opacity-10">
+        <img
+          src={image}
+          loading="eager"
+          alt={title}
+          className="object-cover -rotate-12 scale-150 w-full h-full"
+        />
+      </Layer>
+
+      <Layer className="z-50 pt-4 pl-4 pr-4">
+        <h1
+          className={`font-bold tracking-tight leading-tight ${
+            title.length > 25 ? "text-[2rem]" : "text-4xl"
+          }`}
         >
-          <img
-            alt={title}
-            src={image}
-            className="object-cover rounded-sm banner:w-1/2 story:rounded-md story:mx-auto sq:w-11/12"
-          />
-          <div className="flex-col hidden w-1/2 banner:flex sq:w-11/12">
-            <h1 className="hidden mt-1 font-extrabold leading-tight tracking-tight text-md banner:block banner:text-right banner:text banner:w-auto banner:pl-2 sq:text-center sq:mt-4 story:w-11/12 story:mx-auto">
-              {title}
-            </h1>
-            {date && (
-              <p
-                className="w-full font-light text-right sq:text-center"
-                style={{ fontSize: 24 }}
-              >
-                {dateLegend} {formatDate(date, "d, LLLL yyyy", lang)}
-              </p>
-            )}
+          {title}
+        </h1>
+      </Layer>
+
+      <Layer className="z-50 flex items-end justify-between pb-4 pl-4 pr-4">
+        <div className="flex items-center">
+          <div className="flex overflow-hidden rounded-full shadow-lg">
+            <img
+              src={me}
+              alt="Daniel Esteves"
+              loading="eager"
+              width={84}
+              height={84}
+            />
+          </div>
+          <div className="ml-2 text-sm">
+            <h2 className="font-medium tracking-tight">Daniel Esteves</h2>
           </div>
         </div>
-        {description && (
-          <h2 className="hidden tracking-tight text-gray-50 banner:block">
-            {description}
-          </h2>
-        )}
+        <div>
+          <p className="text-sm font-medium opacity-50">danestves.com</p>
+        </div>
       </Layer>
-    </>
+    </Layer>
   );
 }

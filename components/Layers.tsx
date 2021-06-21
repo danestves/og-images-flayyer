@@ -1,4 +1,5 @@
-import React from "react";
+// Dependencies
+import * as React from "react";
 import clsx from "clsx";
 
 export function Layer({
