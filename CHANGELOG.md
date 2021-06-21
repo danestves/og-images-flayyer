@@ -1,3 +1,9 @@
+#### 1.5.2 (2021-06-21)
+
+##### Bug Fixes
+
+* **config:**  tailwind config working (1f3ce6ff)
+
 #### 1.5.1 (2021-06-21)
 
 ##### Bug Fixes
