@@ -1,3 +1,10 @@
+#### 1.5.1 (2021-06-21)
+
+##### Bug Fixes
+
+* **import:**  well export layer component (8044134c)
+* **order:**  xo order for package (64ab9dec)
+
 ### 1.5.0 (2021-06-21)
 
 ##### New Features
