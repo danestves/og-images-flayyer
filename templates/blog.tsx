@@ -9,7 +9,7 @@ import background from "../static/background.jpeg";
 import me from "../static/me.jpg";
 
 // Components
-import { Layer } from "../components/layers";
+import { Layer } from "../components";
 
 // Styles
 import "../styles/tailwind.css";

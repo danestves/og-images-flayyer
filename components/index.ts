@@ -1,2 +1,1 @@
-export * from './Layers';
-export * from './SvgPattern';
+export * from "./Layers";
