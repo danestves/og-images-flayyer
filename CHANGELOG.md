@@ -1,3 +1,9 @@
+### 1.5.0 (2021-06-21)
+
+##### New Features
+
+* **template:**  new post template (3778a619)
+
 ### 1.4.0 (2021-05-01)
 
 ##### New Features
