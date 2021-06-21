@@ -105,10 +105,5 @@ module.exports = {
       invert: ["dark"],
     },
   },
-  plugins: [
-    /* Some useful plugins: */
-    // require('@tailwindcss/line-clamp'),
-    // require('@tailwindcss/aspect-ratio'),
-    // require('tailwindcss-textshadow'),
-  ],
+  plugins: [require("@tailwindcss/line-clamp")],
 };

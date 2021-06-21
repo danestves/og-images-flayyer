@@ -73,7 +73,7 @@ export default function MainTemplate(props: TemplateProps<Variables>) {
 
       <Layer className="z-50 pt-4 pl-4 pr-4">
         <h1
-          className={`font-bold tracking-tight leading-tight ${
+          className={`font-bold tracking-tight line-clamp-3 leading-tight ${
             title.length > 25 ? "text-[2rem]" : "text-4xl"
           }`}
         >
