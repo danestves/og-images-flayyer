@@ -1,15 +1,26 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
+const colors = require("tailwindcss/colors");
 
 /**
  * See ./styles/tailwind.css for info about measurements in rem units and the default font-size.
  */
 module.exports = {
+  mode: "jit",
   purge: {
     enabled: process.env.NODE_ENV === "production",
     content: [
-      "./templates/**/*.{ts,tsx,js,jsx}",
-      "./components/**/*.{ts,tsx,js,jsx}",
-      "./styles/**/*.{css,scss,sass,less}",
+      "./templates/**/*.ts",
+      "./templates/**/*.tsx",
+      "./templates/**/*.js",
+      "./templates/**/*.jsx",
+      "./components/**/*.ts",
+      "./components/**/*.tsx",
+      "./components/**/*.js",
+      "./components/**/*.jsx",
+      "./styles/**/*.css",
+      "./styles/**/*.scss",
+      "./styles/**/*.sass",
+      "./styles/**/*.less",
     ],
   },
   /**
@@ -19,6 +30,12 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
+      colors: {
+        gray: colors.trueGray,
+        amber: colors.amber,
+        green: colors.emerald,
+        fuchsia: colors.fuchsia,
+      },
       spacing: {
         /**
          * Instagram stories have a recommended safe-area for content.
