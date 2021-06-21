@@ -38,11 +38,11 @@
     "space": 2,
     "extends": "xo-react",
     "rules": {
+      "@typescript-eslint/no-unused-vars": "off",
       "new-cap": "off",
       "no-unused-vars": "off",
-      "react/prop-types": "off",
       "react/function-component-definition": "off",
-      "@typescript-eslint/no-unused-vars": "off"
+      "react/prop-types": "off"
     }
   }
 }
