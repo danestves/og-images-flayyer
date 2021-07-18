@@ -6,7 +6,7 @@ require("dotenv").config();
 module.exports = config({
   deck: "danestves",
   engine: "react-typescript",
-  key: process.env.FLAYYER_KEY,
+  key: process.env.FLYYER_KEY,
   description: "Created with create-flayyer-app",
   homepage:
     "https://danestves.com/en/blog/how-to-create-awesome-ogimages-using-react-components-ckmsgs7cwqj0o0c817wvtpojn",
