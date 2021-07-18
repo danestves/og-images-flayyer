@@ -3,27 +3,28 @@
   "version": "1.5.2",
   "private": true,
   "scripts": {
-    "start": "flayyer start",
-    "build": "flayyer build",
-    "deploy": "flayyer deploy",
+    "start": "flyyer start",
+    "build": "flyyer build",
+    "deploy": "flyyer deploy",
     "format": "xo --fix",
     "release:major": "changelog -M && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version major && git push origin && git push origin --tags",
     "release:minor": "changelog -m && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version minor && git push origin && git push origin --tags",
     "release:patch": "changelog -p && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version patch && git push origin && git push origin --tags"
   },
   "dependencies": {
-    "@flayyer/flayyer-types": "^1.11.2",
-    "@flayyer/variables": "^1.4.1",
+    "@flyyer/proxy": "^2.0.0",
+    "@flyyer/types": "^2.0.2",
+    "@flyyer/variables": "^2.0.1",
     "clsx": "^1.1.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@flayyer/cli": "^1.18.1",
+    "@flyyer/cli": "^2.0.1",
     "@fullhuman/postcss-purgecss": "^4.0.3",
     "@tailwindcss/line-clamp": "^0.2.1",
-    "@tailwindcss/postcss7-compat": "^2.2.2",
-    "@types/react": "^17.0.11",
+    "@tailwindcss/postcss7-compat": "^2.2.4",
+    "@types/react": "^17.0.14",
     "autoprefixer": "^9",
     "dotenv": "^10.0.0",
     "eslint-config-xo-react": "^0.25.0",
@@ -31,8 +32,8 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "postcss": "^7",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
-    "typescript": "^4.3.4",
-    "xo": "^0.40.2"
+    "typescript": "^4.3.5",
+    "xo": "^0.42.0"
   },
   "xo": {
     "prettier": true,

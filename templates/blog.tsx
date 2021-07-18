@@ -1,7 +1,9 @@
 // Dependencies
-import { FlayyerAgentName, TemplateProps } from "@flayyer/flayyer-types";
-import { Variable as V, Validator, Static } from "@flayyer/variables";
 import * as React from "react";
+import { FlyyerAgentName } from "@flyyer/types";
+import {proxy} from '@flyyer/proxy';
+import { Variable as V, Validator, Static } from "@flyyer/variables";
+import type { TemplateProps } from "@flyyer/types";
 
 // Assets
 import alternative from "../static/alternative.jpeg";
@@ -33,21 +35,21 @@ const validator = new Validator(schema);
 export default function MainTemplate(props: TemplateProps<Variables>) {
   const { agent, height, variables, width } = props;
   if (!validator.validate(variables)) {
-    return <img className="w-full h-full object-cover" src={background} />; // Fallback for invalid variables
+    return <img className="object-cover w-full h-full" src={background} />; // Fallback for invalid variables
   }
 
   const { title, image } = variables;
 
   const isThumnail = height <= 1080 && width <= 1080;
-  if (agent.name === FlayyerAgentName.WHATSAPP && isThumnail) {
+  if (agent.name === FlyyerAgentName.WHATSAPP && isThumnail) {
     return (
       <Layer className="bg-black/10">
         <Layer className="opacity-10">
           <img
-            src={image}
+            src={proxy(image)}
             loading="eager"
             alt={title}
-            className="object-cover -rotate-12 scale-150 w-full h-full"
+            className="object-cover w-full h-full scale-150 -rotate-12"
           />
         </Layer>
       </Layer>
@@ -64,10 +66,10 @@ export default function MainTemplate(props: TemplateProps<Variables>) {
 
       <Layer className="opacity-10">
         <img
-          src={image}
+          src={proxy(image)}
           loading="eager"
           alt={title}
-          className="object-cover -rotate-12 scale-150 w-full h-full"
+          className="object-cover w-full h-full scale-150 -rotate-12"
         />
       </Layer>
 
@@ -85,7 +87,7 @@ export default function MainTemplate(props: TemplateProps<Variables>) {
         <div className="flex items-center">
           <div className="flex overflow-hidden rounded-full shadow-lg">
             <img
-              src={me}
+              src={proxy(me)}
               alt="Daniel Esteves"
               loading="eager"
               width={84}

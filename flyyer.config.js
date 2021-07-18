@@ -1,6 +1,6 @@
 // Created with create-flayyer-app@1.17.0
 
-const { config } = require("@flayyer/flayyer-types");
+const { config } = require('@flyyer/types');
 require("dotenv").config();
 
 module.exports = config({
