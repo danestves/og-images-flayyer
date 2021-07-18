@@ -1,3 +1,9 @@
+#### 2.0.1 (2021-07-18)
+
+##### Bug Fixes
+
+* **ci:**  new deploy workflow (fe787d35)
+
 ## 2.0.0 (2021-07-18)
 
 ##### New Features
