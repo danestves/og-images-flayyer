@@ -1,3 +1,13 @@
+## 2.0.0 (2021-07-18)
+
+##### New Features
+
+* **core:**  from flayyer to flyyer (2ef1bf5d)
+
+##### Bug Fixes
+
+* **line:**  max 3 lines of titlw (780ec754)
+
 #### 1.5.2 (2021-06-21)
 
 ##### Bug Fixes
