@@ -1,4 +1,4 @@
-name: flayyer-deploy-yarn
+name: flyyer-deploy-yarn
 
 on:
   push:
@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      FLAYYER_KEY: ${{secrets.FLAYYER_KEY}}
+      FLYYER_KEY: ${{secrets.FLYYER_KEY}}
       NODE_ENV: production
 
     steps:
@@ -32,8 +32,8 @@ jobs:
       - name: Install dependencies
         run: yarn install --production=false # force install devDependencies
 
-      - name: Build project
+      - name: Build production deck
         run: yarn run build
 
-      - name: Publish
+      - name: Publish to Flyyer.io
         run: yarn run deploy
