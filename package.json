@@ -44,6 +44,7 @@
       "new-cap": "off",
       "no-unused-vars": "off",
       "react/function-component-definition": "off",
+      "react/jsx-sort-props": 2,
       "react/prop-types": "off"
     }
   }

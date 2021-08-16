@@ -1,28 +1,28 @@
 // Dependencies
-import * as React from "react";
-import { FlyyerAgentName } from "@flyyer/types";
+import * as React from 'react';
+import {FlyyerAgentName} from '@flyyer/types';
 import {proxy} from '@flyyer/proxy';
-import { Variable as V, Validator, Static } from "@flyyer/variables";
-import type { TemplateProps } from "@flyyer/types";
+import {Variable as V, Validator, Static} from '@flyyer/variables';
+import type {TemplateProps} from '@flyyer/types';
 
 // Assets
-import alternative from "../static/alternative.jpeg";
-import background from "../static/background.jpeg";
-import me from "../static/me.jpg";
+import alternative from '../static/alternative.jpeg';
+import background from '../static/background.jpeg';
+import me from '../static/me.jpeg';
 
 // Components
-import { Layer } from "../components";
+import {Layer} from '../components';
 
 // Styles
-import "../styles/tailwind.css";
+import '../styles/tailwind.css';
 
 /**
  * Export to enable variables UI on Flayyer.com
  */
 export const schema = V.Object({
-  title: V.String({ default: "Created with React.js, TailwindCSS & Flayyer" }),
+  title: V.String({default: 'Created with React.js, TailwindCSS & Flayyer'}),
   image: V.Image({
-    title: "Background image URL",
+    title: 'Background image URL',
     examples: [alternative],
     default: background,
   }),
@@ -33,12 +33,12 @@ const validator = new Validator(schema);
 
 // Make sure to 'export default' a React component
 export default function MainTemplate(props: TemplateProps<Variables>) {
-  const { agent, height, variables, width } = props;
+  const {agent, height, variables, width} = props;
   if (!validator.validate(variables)) {
     return <img className="object-cover w-full h-full" src={background} />; // Fallback for invalid variables
   }
 
-  const { title, image } = variables;
+  const {title, image} = variables;
 
   const isThumnail = height <= 1080 && width <= 1080;
   if (agent.name === FlyyerAgentName.WHATSAPP && isThumnail) {
@@ -76,7 +76,7 @@ export default function MainTemplate(props: TemplateProps<Variables>) {
       <Layer className="z-50 pt-4 pl-4 pr-4">
         <h1
           className={`font-bold tracking-tight line-clamp-3 leading-tight ${
-            title.length > 25 ? "text-[2rem]" : "text-4xl"
+            title.length > 25 ? 'text-[2rem]' : 'text-4xl'
           }`}
         >
           {title}
