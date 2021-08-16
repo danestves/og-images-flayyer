@@ -70,7 +70,7 @@ export default function PostTemplate(props: TemplateProps<Variables>) {
       <Layer>
         <img
           alt=""
-          className="absolute inset-0 z-0 object-cover h-full"
+          className="absolute inset-0 z-0 object-cover w-full h-full"
           src={bg}
         />
 
@@ -90,7 +90,7 @@ export default function PostTemplate(props: TemplateProps<Variables>) {
     <Layer className="bg-[#E8EAEE] flex items-center px-2">
       <img
         alt=""
-        className="absolute inset-0 z-0 object-cover h-full"
+        className="absolute inset-0 z-0 object-cover w-full h-full"
         src={bg}
       />
 
