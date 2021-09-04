@@ -16,8 +16,8 @@
     "@flyyer/types": "^2.0.3",
     "@flyyer/variables": "^2.0.2",
     "clsx": "^1.1.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
   },
   "devDependencies": {
     "@flyyer/cli": "^2.0.1",
@@ -29,7 +29,7 @@
     "dotenv": "^10.0.0",
     "eslint-config-xo-react": "^0.25.0",
     "eslint-plugin-react": "^7.24.0",
-    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-react-hooks": "4.2.0",
     "postcss": "^7",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "typescript": "^4.3.5",
