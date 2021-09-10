@@ -1224,14 +1224,14 @@
   resolved "https://registry.yarnpkg.com/@flyyer/utils/-/utils-0.2.1.tgz#07bcbe5e9e744f55bff93ee0b5af492824b851d6"
   integrity sha512-SESwzdsrFe2GT36ohbxNRL6jDUtPbXzZHpb/EWUQP0EtyHbi8o1iSaELbeU/dktszmgbZqRpUKykRwHD/+b6Yg==
 
-"@flyyer/variables@^2.0.2":
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/@flyyer/variables/-/variables-2.0.2.tgz#1bf811ced0eab3866b0650e804b5622a8b10f59c"
-  integrity sha512-eBDez4O75/qmw293Q6Okro7UZxnzUwB8SMjJ32doauNWe0i6UF2wFLUZwoTBGd0wGXX/RtpHUtPkq9wDtukGoQ==
+"@flyyer/variables@2.1.3":
+  version "2.1.3"
+  resolved "https://registry.yarnpkg.com/@flyyer/variables/-/variables-2.1.3.tgz#b47a6f7b775d09e0fcadbf738c7732650b1aa3a2"
+  integrity sha512-9wM3GzVV8QVUHDHdLoEi0l2FBTZxXz9FdfveS4M79kZObThegfxZ/0n0aWejoqUlgMgTywSMmt93KXRWrYXADQ==
   dependencies:
-    "@sinclair/typebox" "^0.17.1"
+    "@sinclair/typebox" "=0.18.0"
     ajv "^8.6.2"
-    ajv-formats "^2.1.0"
+    ajv-formats "^2.1.1"
 
 "@fullhuman/postcss-purgecss@^3.1.3":
   version "3.1.3"
@@ -1407,10 +1407,10 @@
     "@parcel/utils" "^1.11.0"
     physical-cpu-count "^2.0.0"
 
-"@sinclair/typebox@^0.17.1":
-  version "0.17.8"
-  resolved "https://registry.yarnpkg.com/@sinclair/typebox/-/typebox-0.17.8.tgz#9cef4c284d2437368d90fc36a002549681e7263b"
-  integrity sha512-enm8ET5E31RYbzGYPB9p+CvRzURrNEUCS2EvUxYQCdnDJw6wBpn6N+TK7iIumCc6fTRKgoOX1InJO2cQYZA4mg==
+"@sinclair/typebox@=0.18.0":
+  version "0.18.0"
+  resolved "https://registry.yarnpkg.com/@sinclair/typebox/-/typebox-0.18.0.tgz#c7f31bd7ba59634dc7b2468a873b78553b680342"
+  integrity sha512-VfCZfx5BAF+NpJV+XIKqvQvZbbXCKWyTk2QYbQ8GD2BN7ipnITaKTNdJGzFQ1fZn/+4eh8tlisaNA0RLxG8isg==
 
 "@tailwindcss/line-clamp@^0.2.1":
   version "0.2.1"
@@ -1653,10 +1653,10 @@ aggregate-error@^3.0.0:
     clean-stack "^2.0.0"
     indent-string "^4.0.0"
 
-ajv-formats@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/ajv-formats/-/ajv-formats-2.1.0.tgz#96eaf83e38d32108b66d82a9cb0cfa24886cdfeb"
-  integrity sha512-USH2jBb+C/hIpwD2iRjp0pe0k+MvzG0mlSn/FIdCgQhUb9ALPRjt2KIQdfZDS9r0ZIeUAg7gOu9KL0PFqGqr5Q==
+ajv-formats@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/ajv-formats/-/ajv-formats-2.1.1.tgz#6e669400659eb74973bbf2e33327180a0996b520"
+  integrity sha512-Wx0Kx52hxE7C18hkMEggYlEifqWZtYaRgouJor+WMdPnQyEK13vgEWyVNup7SoeeoLMsr4kf5h6dOW11I15MUA==
   dependencies:
     ajv "^8.0.0"
 
