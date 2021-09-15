@@ -1,9 +1,9 @@
 // Dependencies
 import * as React from "react";
+import clsx from "clsx";
 import { proxy } from "@flyyer/proxy";
 import { FlyyerAgentName } from "@flyyer/types";
 import { Variable as V, Validator } from "@flyyer/variables";
-import clsx from "clsx";
 import type { TemplateProps } from "@flyyer/types";
 import type { Static } from "@flyyer/variables";
 
@@ -40,6 +40,14 @@ export const schema = V.Object({
     examples: [alternative],
     title: "Post image",
   }),
+  locale: V.Optional(
+    V.String({
+      default: "en",
+      description: "The locale of the post",
+      examples: ["en", "es"],
+      title: "Post locale",
+    })
+  ),
   title: V.String({
     default: "Created with React.js, TailwindCSS & Flayyer",
     description: "The title of the post",
@@ -69,8 +77,7 @@ const translations = {
 };
 
 export default function PostTemplate(props: TemplateProps<Variables>) {
-  const { agent, height, variables, width } = props;
-  const locale: Locale = (props.locale as Locale) || "en";
+  const { agent, variables } = props;
 
   if (!validator.validate(variables)) {
     // Fallback for invalid variables
@@ -78,6 +85,7 @@ export default function PostTemplate(props: TemplateProps<Variables>) {
   }
 
   const { content, date, image, title, views } = variables;
+  const locale = (variables.locale as Locale) || "en";
 
   const formatter = new Intl.DateTimeFormat(locale, {
     year: "numeric",
@@ -85,18 +93,16 @@ export default function PostTemplate(props: TemplateProps<Variables>) {
     day: "numeric",
   });
 
-  const isThumnail = height <= 1080 && width <= 1080;
-
-  if (agent.name === FlyyerAgentName.WHATSAPP || isThumnail) {
+  if (agent.name === FlyyerAgentName.WHATSAPP) {
     return (
       <Layer>
         <img
           alt=""
           className="absolute inset-0 z-0 object-cover w-full h-full"
-          src={bg}
+          src={proxy(bg)}
         />
 
-        <Layer className="z-10 p-6">
+        <Layer className="z-10 p-4">
           <img
             alt={title}
             className="w-full h-full rounded-full"
@@ -109,8 +115,13 @@ export default function PostTemplate(props: TemplateProps<Variables>) {
   }
 
   return (
-    <Layer className="flex items-center px-2 overflow-hidden bg-white">
-      <div className="container mt-5 max-w-[1172.4px] mx-auto z-10">
+    <Layer
+      className={clsx(
+        "flex items-center px-2 overflow-hidden bg-white",
+        !locale && views && "flyyer-wait"
+      )}
+    >
+      <div className="container max-w-[1172.4px] mx-auto z-10">
         <div className="grid items-center grid-cols-12 gap-y-[24px] md:gap-[48px]">
           <div className="col-span-12 md:col-span-7 story:!col-span-12">
             <div className="overflow-hidden shadow-md rounded-[19.2px] story:!rounded-[38.4px]">
@@ -122,8 +133,8 @@ export default function PostTemplate(props: TemplateProps<Variables>) {
               />
             </div>
 
-            <div className="relative flex items-end px-[28.8px] mt-[-48px] space-x-[19.2px] story:!px-[57.6px] story:!mt-[-96px] story:!space-x-[38.4px]">
-              <div className="w-[96px] h-[96px] overflow-hidden rounded-full drop-shadow-lg story:!w-[192px] story:!h-[192px]">
+            <div className="relative flex items-end px-[28.8px] space-x-[19.2px] thumb:mt-[-32px] banner:mt-[-48px] story:!px-[57.6px] story:!mt-[-96px] story:!space-x-[38.4px]">
+              <div className="overflow-hidden rounded-full drop-shadow-lg thumb:w-[64px] thumb:h-[64px] banner:w-[96px] banner:h-[96px] story:!w-[192px] story:!h-[192px]">
                 <img
                   alt="Daniel Esteves"
                   className="w-full"
@@ -131,12 +142,12 @@ export default function PostTemplate(props: TemplateProps<Variables>) {
                   src={proxy(me)}
                 />
               </div>
-              <span className="px-[14.4px] py-[9.6px] text-[14.4px] font-bold text-black rounded-full bg-primary story:!px-[28.8px] story:!py-[19.2px] story:!text-[28.8px]">
+              <span className="font-bold text-black rounded-full bg-primary thumb:px-[10px] thumb:py-[5px] thumb:text-[12px] banner:px-[14.4px] banner:py-[9.6px] banner:text-[14.4px] story:!px-[28.8px] story:!py-[19.2px] story:!text-[28.8px]">
                 {views} {translations[locale].views}
               </span>
-              <div className="absolute flex justify-end flex-1 right-[28.8px] bottom-[28.8px] story:!right-[57.6px] story:!bottom-[57.6px]">
+              <div className="absolute flex justify-end flex-1 right-[28.8px] thumb:bottom-[16px] banner:bottom-[28.8px] story:!right-[57.6px] story:!bottom-[57.6px]">
                 <button
-                  className="z-10 flex items-center px-[14.4px] py-[9.6px] text-[14.4px] font-bold text-black rounded-full bg-primary story:!px-[28.8px] story:!py-[19.2px] story:!text-[28.8px]"
+                  className="z-10 flex items-center px-[14.4px] py-[9.6px] text-[14.4px] font-bold text-black rounded-full bg-primary story:px-[28.8px] story:py-[19.2px] story:text-[28.8px]"
                   type="button"
                 >
                   <span className="sr-only sm:not-sr-only">
@@ -158,15 +169,15 @@ export default function PostTemplate(props: TemplateProps<Variables>) {
             </div>
           </div>
 
-          <div className="col-span-12 space-y-[19.2px] md:col-span-5 story:!col-span-12 story:!space-y-[38.4px]">
-            <h1 className="text-[28.8px] font-bold text-[#071D49] story:!text-[57.6px]">
+          <div className="col-span-12 thumb:space-y-[16px] banner:space-y-[19.2px] story:!col-span-12 story:!space-y-[38.4px] md:col-span-5">
+            <h1 className="font-bold text-[#071D49] thumb:text-[18px] banner:text-[28.8px] story:!text-[57.6px]">
               {title}
             </h1>
-            <p className="text-[14.4px] font-bold text-primary story:!text-[28.8px]">
+            <p className="font-bold text-primary thumb:text-[12px] banner:text-[14.4px] story:!text-[28.8px]">
               {translations[locale].published}{" "}
               <time dateTime={date}>{formatter.format(new Date(date))}</time>
             </p>
-            <p className="text-[14.4px] font-bold text-[#838383] whitespace-pre-line story:!text-[28.8px]">
+            <p className="font-bold text-[#838383] whitespace-pre-line thumb:hidden banner:block banner:text-[14.4px] story:!text-[28.8px]">
               {content}
             </p>
           </div>
