@@ -2,7 +2,6 @@
 import * as React from "react";
 import clsx from "clsx";
 import { proxy } from "@flyyer/proxy";
-import { FlyyerAgentName } from "@flyyer/types";
 import { Variable as V, Validator } from "@flyyer/variables";
 import type { TemplateProps } from "@flyyer/types";
 import type { Static } from "@flyyer/variables";
@@ -11,7 +10,6 @@ import type { Static } from "@flyyer/variables";
 import { Layer } from "../components";
 import alternative from "../static/alternative.jpeg";
 import background from "../static/background.jpeg";
-import bg from "../static/bg.svg";
 import me from "../static/me.jpeg";
 import "../styles/tailwind.css";
 
@@ -92,27 +90,6 @@ export default function PostTemplate(props: TemplateProps<Variables>) {
     month: "long",
     day: "numeric",
   });
-
-  if (agent.name === FlyyerAgentName.WHATSAPP) {
-    return (
-      <Layer>
-        <img
-          alt=""
-          className="absolute inset-0 z-0 object-cover w-full h-full"
-          src={proxy(bg)}
-        />
-
-        <Layer className="z-10 p-4">
-          <img
-            alt={title}
-            className="w-full h-full rounded-full"
-            loading="eager"
-            src={proxy(me)}
-          />
-        </Layer>
-      </Layer>
-    );
-  }
 
   return (
     <Layer
