@@ -12,27 +12,27 @@
     "release:patch": "changelog -p && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version patch && git push origin && git push origin --tags"
   },
   "dependencies": {
-    "@flyyer/proxy": "^2.0.0",
-    "@flyyer/types": "^2.0.3",
-    "@flyyer/variables": "^2.1.3",
-    "clsx": "^1.1.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "@flyyer/proxy": "2.0.0",
+    "@flyyer/types": "2.0.3",
+    "@flyyer/variables": "2.1.3",
+    "clsx": "1.1.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
   },
   "devDependencies": {
-    "@flyyer/cli": "^2.0.1",
-    "@fullhuman/postcss-purgecss": "^4.0.3",
-    "@tailwindcss/line-clamp": "^0.2.1",
-    "@types/react": "^17.0.21",
-    "autoprefixer": "^9",
-    "dotenv": "^10.0.0",
-    "eslint-config-xo-react": "^0.25.0",
-    "eslint-plugin-react": "^7.25.1",
-    "eslint-plugin-react-hooks": "^4.2.0",
-    "postcss": "^7",
+    "@flyyer/cli": "2.0.1",
+    "@fullhuman/postcss-purgecss": "4.0.3",
+    "@tailwindcss/line-clamp": "0.2.1",
+    "@types/react": "17.0.21",
+    "autoprefixer": "9.8.6",
+    "dotenv": "10.0.0",
+    "eslint-config-xo-react": "0.25.0",
+    "eslint-plugin-react": "7.25.1",
+    "eslint-plugin-react-hooks": "4.2.0",
+    "postcss": "7.0.35",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
-    "typescript": "^4.4.3",
-    "xo": "^0.44.0"
+    "typescript": "4.4.3",
+    "xo": "0.44.0"
   },
   "xo": {
     "prettier": true,
