@@ -1204,10 +1204,10 @@
   resolved "https://registry.yarnpkg.com/@flyyer/goerr/-/goerr-2.0.1.tgz#5dcd04d54bcf2b133419946e41eeee7e53968a5d"
   integrity sha512-BrQ8QCFxwk6Hohdx8sbDuyOBuFWqafFcYf/T91WvQKRzG4/789pAm+Q108PBmA9HG3GHdWWHskgAsd+D2dhkHA==
 
-"@flyyer/proxy@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@flyyer/proxy/-/proxy-2.0.0.tgz#e37a50787ecbf664d8ef81fd621ac9f980830ff4"
-  integrity sha512-RsHfAOIRH/ISwv5vP+nyAdLwhu+KO2Fryyd2hoO8IAop3JOg7lKF0qExYKV9x/87sK0VzuVN7zLqs1AXTxwA+g==
+"@flyyer/proxy@2.1.2":
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/@flyyer/proxy/-/proxy-2.1.2.tgz#742d5b34a51ecad1f81d70fd57c9a26499270bd6"
+  integrity sha512-AY6u0OJm3tw0zA2aFJusKyUKvnyUUwLu8dtDIpuQ5t2ifPHKF+uRpsuQ2VwqiTUV6bRldvLQkFpPAyR7sb8gFg==
 
 "@flyyer/types@^2.0.2":
   version "2.0.2"
