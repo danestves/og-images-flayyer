@@ -1162,57 +1162,59 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@flyyer/cli@^2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@flyyer/cli/-/cli-2.0.1.tgz#7b9986c686b3ceec9eb5982c696771cbb7807bec"
-  integrity sha512-25H4Tv18v93n4vVZ7OJR82RwOKKc0ek7tmPzlYzRLm9TmTNHCxs3HH80u60j/J6N2yi3AIimezFL3U0cCFLOaQ==
+"@flyyer/cli@2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@flyyer/cli/-/cli-2.0.2.tgz#6e3bc0c3f34863a1284f342582b5a35a1605e4a0"
+  integrity sha512-B64NoSjmjltIqyvB3iZCIL03D4oqNEmoYPXCRBbACF5zNiiMY8x+AcCb+tWztStrEmb6AsgQ3zXc4z/q9NdYqw==
   dependencies:
-    "@flyyer/flyyer" "^3.0.1"
-    "@flyyer/goerr" "^2.0.1"
-    "@flyyer/types" "^2.0.2"
+    "@flyyer/flyyer" "^3.4.1"
+    "@flyyer/goerr" "^3.0.0"
+    "@flyyer/types" "^2.0.3"
     "@flyyer/utils" "^0.2.1"
     "@oclif/command" "^1.8.0"
     "@oclif/config" "^1.17.0"
-    "@oclif/plugin-help" "^3.2.2"
+    "@oclif/plugin-help" "^3.2.3"
     archiver "^5.3.0"
-    chalk "^4.1.1"
+    chalk "^4.1.2"
     chokidar "^3.5.2"
     cross-fetch "^3.1.4"
     debug "^4.3.2"
     dedent "^0.7.0"
     del "^6.0.0"
     form-data "^4.0.0"
-    graphql "^15.5.1"
-    graphql-request "3.4.0"
-    mini-svg-data-uri "^1.3.3"
+    graphql "^15.6.1"
+    graphql-request "3.6.1"
+    mini-svg-data-uri "^1.4.3"
     open "~7.4.2"
     parcel-bundler "^1.12.5"
     qs "^6.10.1"
-    tslib "^2.3.0"
+    tslib "^2.3.1"
     twemoji "^13.1.0"
 
-"@flyyer/flyyer@^3.0.1":
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/@flyyer/flyyer/-/flyyer-3.0.1.tgz#9777da368b473c302479112b85fd287b64b6dbe6"
-  integrity sha512-qfJU4W7zBSEYDEdHX6b5u3BuA/tUHj3iIZ4mSWQN+r1uOG6lKIgVXk/oLNtZgcUM9wP+rzCISLAz8Awbpq8uVw==
+"@flyyer/flyyer-lite@^3.4.1":
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/@flyyer/flyyer-lite/-/flyyer-lite-3.4.1.tgz#fdf8d45b3139a2ce1f301357d02f17ad444296cd"
+  integrity sha512-Mn+X2rRhKKBsS4UGFA35qCeV57gcCCJtqJe/rd7QBGE79/lg1mQ4o4td571+MhwEnhMMnWSr3mU2eQ6ikxailQ==
   dependencies:
-    "@types/qs" "^6.9.6"
-    qs "^6.10.1"
+    "@types/qs" "^6.5.3"
+    qs "^6.5.1 < 6.10"
 
-"@flyyer/goerr@^2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@flyyer/goerr/-/goerr-2.0.1.tgz#5dcd04d54bcf2b133419946e41eeee7e53968a5d"
-  integrity sha512-BrQ8QCFxwk6Hohdx8sbDuyOBuFWqafFcYf/T91WvQKRzG4/789pAm+Q108PBmA9HG3GHdWWHskgAsd+D2dhkHA==
+"@flyyer/flyyer@^3.4.1":
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/@flyyer/flyyer/-/flyyer-3.4.1.tgz#85dd63ead2e79d699c0e7595f81344407ee92eb0"
+  integrity sha512-VRmDEO3Adfmpn3EebVEJYCkHCWq5lolPqvNfdLozDYL3z8Qb4ioJDtg/vcUT+mlWmn6b3mWR/VmpHsZGzARAXw==
+  dependencies:
+    "@flyyer/flyyer-lite" "^3.4.1"
+
+"@flyyer/goerr@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@flyyer/goerr/-/goerr-3.0.0.tgz#ceac9c33acfeb359b51194649f143141dbf75a00"
+  integrity sha512-YylkV8gkF0w2o8aKh+4cN8HJxIeX3lGsAEXIIMu7Ne5rsLsB5FiwlsdmxN1kXTtWIEljRf0/lR4mcmCyja8riw==
 
 "@flyyer/proxy@^2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@flyyer/proxy/-/proxy-2.0.0.tgz#e37a50787ecbf664d8ef81fd621ac9f980830ff4"
   integrity sha512-RsHfAOIRH/ISwv5vP+nyAdLwhu+KO2Fryyd2hoO8IAop3JOg7lKF0qExYKV9x/87sK0VzuVN7zLqs1AXTxwA+g==
-
-"@flyyer/types@^2.0.2":
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/@flyyer/types/-/types-2.0.2.tgz#0298fa46cec31391d33e914e0471ff0b614022ef"
-  integrity sha512-Omlz4NjVw4joo8iu0LQBU0bRigz8zK/vP2gnxfgoFgjhsOCu0cccvGC8QL5fE68n0hUww4IYQvu/Pnl74FomRA==
 
 "@flyyer/types@^2.0.3":
   version "2.0.3"
@@ -1350,10 +1352,26 @@
     chalk "^2.4.2"
     tslib "^1.9.3"
 
-"@oclif/plugin-help@^3", "@oclif/plugin-help@^3.2.2":
+"@oclif/plugin-help@^3":
   version "3.2.2"
   resolved "https://registry.yarnpkg.com/@oclif/plugin-help/-/plugin-help-3.2.2.tgz#063ee08cee556573a5198fbdfdaa32796deba0ed"
   integrity sha512-SPZ8U8PBYK0n4srFjCLedk0jWU4QlxgEYLCXIBShJgOwPhTTQknkUlsEwaMIevvCU4iCQZhfMX+D8Pz5GZjFgA==
+  dependencies:
+    "@oclif/command" "^1.5.20"
+    "@oclif/config" "^1.15.1"
+    "@oclif/errors" "^1.2.2"
+    chalk "^4.1.0"
+    indent-string "^4.0.0"
+    lodash.template "^4.4.0"
+    string-width "^4.2.0"
+    strip-ansi "^6.0.0"
+    widest-line "^3.1.0"
+    wrap-ansi "^4.0.0"
+
+"@oclif/plugin-help@^3.2.3":
+  version "3.2.3"
+  resolved "https://registry.yarnpkg.com/@oclif/plugin-help/-/plugin-help-3.2.3.tgz#cd24010e7eb326782843d3aa6d6b5a4affebb2c3"
+  integrity sha512-l2Pd0lbOMq4u/7xsl9hqISFqyR9gWEz/8+05xmrXFr67jXyS6EUCQB+mFBa0wepltrmJu0sAFg9AvA2mLaMMqQ==
   dependencies:
     "@oclif/command" "^1.5.20"
     "@oclif/config" "^1.15.1"
@@ -1465,7 +1483,7 @@
   resolved "https://registry.yarnpkg.com/@types/q/-/q-1.5.5.tgz#75a2a8e7d8ab4b230414505d92335d1dcb53a6df"
   integrity sha512-L28j2FcJfSZOnL1WBjDYp2vUHCeIFlyYI/53EwD/rKUBQ7MtUUfbQWiyKJGpcnv4/WgrhWsFKrcPstcAt/J0tQ==
 
-"@types/qs@^6.9.6":
+"@types/qs@^6.5.3":
   version "6.9.7"
   resolved "https://registry.yarnpkg.com/@types/qs/-/qs-6.9.7.tgz#63bb7d067db107cc1e457c303bc25d511febf6cb"
   integrity sha512-FGa1F62FT09qcrueBA6qYTrJPVDzah9a+493+o2PCXsesWHIn27G98TsSMs3WPNbZIEj4+VJf6saSFpvD+3Zsw==
@@ -2382,10 +2400,10 @@ chalk@^4.0.0, chalk@^4.1.0:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
 
-chalk@^4.1.1:
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/chalk/-/chalk-4.1.1.tgz#c80b3fab28bf6371e6863325eee67e618b77e6ad"
-  integrity sha512-diHzdDKxcU+bAsUboHLPEDQiw0qEe0qd7SYUn3HgcFlWgbDcfLGswOHYeGrHKzG9z6UYf01d9VFMfZxPM1xZSg==
+chalk@^4.1.2:
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/chalk/-/chalk-4.1.2.tgz#aac4e2b7734a740867aeb16bf02aad556a1e7a01"
+  integrity sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==
   dependencies:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
@@ -4438,19 +4456,19 @@ grapheme-breaker@^0.3.2:
     brfs "^1.2.0"
     unicode-trie "^0.3.1"
 
-graphql-request@3.4.0:
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/graphql-request/-/graphql-request-3.4.0.tgz#3a400cd5511eb3c064b1873afb059196bbea9c2b"
-  integrity sha512-acrTzidSlwAj8wBNO7Q/UQHS8T+z5qRGquCQRv9J1InwR01BBWV9ObnoE+JS5nCCEj8wSGS0yrDXVDoRiKZuOg==
+graphql-request@3.6.1:
+  version "3.6.1"
+  resolved "https://registry.yarnpkg.com/graphql-request/-/graphql-request-3.6.1.tgz#689cce1da990131b40b05651f9f32bff506a1d8e"
+  integrity sha512-Nm1EasrAQVZllyNTlHDLnLZjlhC6eRWnWP6KH//ytnAL08pjlLkdI2K+s6OV92p45hn5b/kUlLbDwACmRoLwrQ==
   dependencies:
     cross-fetch "^3.0.6"
     extract-files "^9.0.0"
     form-data "^3.0.0"
 
-graphql@^15.5.1:
-  version "15.5.1"
-  resolved "https://registry.yarnpkg.com/graphql/-/graphql-15.5.1.tgz#f2f84415d8985e7b84731e7f3536f8bb9d383aad"
-  integrity sha512-FeTRX67T3LoE3LWAxxOlW2K3Bz+rMYAC18rRguK4wgXaTZMiJwSUwDmPFo3UadAKbzirKIg5Qy+sNJXbpPRnQw==
+graphql@^15.6.1:
+  version "15.6.1"
+  resolved "https://registry.yarnpkg.com/graphql/-/graphql-15.6.1.tgz#9125bdf057553525da251e19e96dab3d3855ddfc"
+  integrity sha512-3i5lu0z6dRvJ48QP9kFxBkJ7h4Kso7PS8eahyTFz5Jm6CvQfLtNIE8LX9N6JLnXTuwR+sIYnXzaWp6anOg0QQw==
 
 har-schema@^2.0.0:
   version "2.0.0"
@@ -5805,10 +5823,10 @@ min-indent@^1.0.1:
   resolved "https://registry.yarnpkg.com/min-indent/-/min-indent-1.0.1.tgz#a63f681673b30571fbe8bc25686ae746eefa9869"
   integrity sha512-I9jwMn07Sy/IwOj3zVkVik2JTvgpaykDZEigL6Rx6N9LbMywwUSMtxET+7lVoDLLd3O3IXwJwvuuns8UB/HeAg==
 
-mini-svg-data-uri@^1.3.3:
-  version "1.3.3"
-  resolved "https://registry.yarnpkg.com/mini-svg-data-uri/-/mini-svg-data-uri-1.3.3.tgz#91d2c09f45e056e5e1043340b8b37ba7b50f4fac"
-  integrity sha512-+fA2oRcR1dJI/7ITmeQJDrYWks0wodlOz0pAEhKYJ2IVc1z0AnwJUsKY2fzFmPAM3Jo9J0rBx8JAA9QQSJ5PuA==
+mini-svg-data-uri@^1.4.3:
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/mini-svg-data-uri/-/mini-svg-data-uri-1.4.3.tgz#43177b2e93766ba338931a3e2a84a3dfd3a222b8"
+  integrity sha512-gSfqpMRC8IxghvMcxzzmMnWpXAChSA+vy4cia33RgerMS8Fex95akUyQZPbxJJmeBGiGmK7n/1OpUX8ksRjIdA==
 
 minimalistic-assert@^1.0.0, minimalistic-assert@^1.0.1:
   version "1.0.1"
@@ -7152,6 +7170,11 @@ qs@^6.10.1:
   dependencies:
     side-channel "^1.0.4"
 
+"qs@^6.5.1 < 6.10":
+  version "6.9.6"
+  resolved "https://registry.yarnpkg.com/qs/-/qs-6.9.6.tgz#26ed3c8243a431b2924aca84cc90471f35d5a0ee"
+  integrity sha512-TIRk4aqYLNoJUbd+g2lEdz5kLWIuTMRagAXxl78Q0RiVjAOugHmeKNGdd3cwo/ktpf9aL9epCfFqWDEKysUlLQ==
+
 qs@~6.5.2:
   version "6.5.2"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.2.tgz#cb3ae806e8740444584ef154ce8ee98d403f3e36"
@@ -8395,10 +8418,15 @@ tslib@^1.8.1, tslib@^1.9.3:
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
   integrity sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
 
-tslib@^2.0.0, tslib@^2.3.0:
+tslib@^2.0.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.3.0.tgz#803b8cdab3e12ba581a4ca41c8839bbb0dacb09e"
   integrity sha512-N82ooyxVNm6h1riLCoyS9e3fuJ3AMG2zIZs2Gd1ATcSFjSA23Q0fzjjZeh0jbJvWVDZ0cJT8yaNNaaXHzueNjg==
+
+tslib@^2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.3.1.tgz#e8a335add5ceae51aa261d32a490158ef042ef01"
+  integrity sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==
 
 tsutils@^3.21.0:
   version "3.21.0"
