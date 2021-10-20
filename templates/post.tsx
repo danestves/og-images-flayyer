@@ -17,7 +17,7 @@ type Variables = Static<typeof schema>;
 type Locale = "en" | "es";
 
 /**
- * Export to enable variables UI on Flayyer.com
+ * Export to enable variables UI on Flyyer.io
  */
 export const schema = V.Object({
   content: V.String({
@@ -47,9 +47,9 @@ export const schema = V.Object({
     })
   ),
   title: V.String({
-    default: "Created with React.js, TailwindCSS & Flayyer",
+    default: "Created with React.js, TailwindCSS & Flyyer",
     description: "The title of the post",
-    examples: ["Created with React.js, TailwindCSS & Flayyer"],
+    examples: ["Created with React.js, TailwindCSS & Flyyer"],
     title: "Post title",
   }),
   views: V.String({
