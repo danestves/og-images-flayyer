@@ -17,10 +17,10 @@ import {Layer} from '../components';
 import '../styles/tailwind.css';
 
 /**
- * Export to enable variables UI on Flayyer.com
+ * Export to enable variables UI on Flyyer.io
  */
 export const schema = V.Object({
-  title: V.String({default: 'Created with React.js, TailwindCSS & Flayyer'}),
+  title: V.String({default: 'Created with React.js, TailwindCSS & Flyyer'}),
   image: V.Image({
     title: 'Background image URL',
     examples: [alternative],
