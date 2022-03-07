@@ -32,7 +32,7 @@
     "postcss": "^7",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "typescript": "^4.4.3",
-    "xo": "^0.44.0"
+    "xo": "0.48.0"
   },
   "xo": {
     "prettier": true,
