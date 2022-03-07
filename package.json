@@ -22,7 +22,7 @@
   "devDependencies": {
     "@flyyer/cli": "^2.0.1",
     "@fullhuman/postcss-purgecss": "^4.0.3",
-    "@tailwindcss/line-clamp": "^0.2.1",
+    "@tailwindcss/line-clamp": "0.3.1",
     "@types/react": "^17.0.21",
     "autoprefixer": "^9",
     "dotenv": "^10.0.0",
