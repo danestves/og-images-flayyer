@@ -24,7 +24,7 @@
     "@fullhuman/postcss-purgecss": "^4.0.3",
     "@tailwindcss/line-clamp": "^0.2.1",
     "@types/react": "^17.0.21",
-    "autoprefixer": "^9",
+    "autoprefixer": "10.4.4",
     "dotenv": "^10.0.0",
     "eslint-config-xo-react": "^0.25.0",
     "eslint-plugin-react": "^7.25.1",
